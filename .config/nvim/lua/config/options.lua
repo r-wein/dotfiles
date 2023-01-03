@@ -1,45 +1,38 @@
-vim.opt.nu = true
-vim.opt.relativenumber = true
-
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-
-vim.opt.cursorline = true
-
-vim.opt.smartindent = true
-
-vim.opt.wrap = false
-
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
-
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-
-vim.opt.termguicolors = true
-
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
-
-vim.opt.updatetime = 50
-
-vim.opt.colorcolumn = "100"
-
+vim.opt.nu = true  -- show line numbers
+vim.opt.relativenumber = true  -- show relative line numbers
+vim.opt.confirm = true -- confirm before overwriting a file
+vim.opt.pumheight = 10 -- limit completion items
+vim.opt.pumblend = 10 -- transparency for popup menu
+vim.opt.tabstop = 2 -- number of visual spaces per TAB 
+vim.opt.softtabstop = 2 -- number of spaces in tab when editing
+vim.opt.shiftwidth = 2 -- number of spaces to use for autoindent
+vim.opt.expandtab = true -- spacesinstead of tabs
+vim.opt.smartindent = true -- auto indent
+vim.opt.cursorline = true  -- highlight current line
+vim.opt.wrap = false -- display long lines as just one line
+vim.opt.swapfile = false -- no swap file
+vim.opt.backup = false  -- no backup file
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- set undo directory
+vim.opt.undofile = true -- enable persistent undo
+vim.opt.hlsearch = false -- no highlight search
+vim.opt.incsearch = true -- show search results as you type
+vim.opt.ignorecase = true -- ignore case when searching
+vim.opt.smartcase = true -- ignore case if search pattern contains lowercase
+vim.opt.termguicolors = true -- true color support
+vim.opt.scrolloff = 8 -- lines of context
+vim.opt.sidescrolloff = 8 -- columns of context
+vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
+vim.opt.isfname:append("@-@") -- treat dash separated words as a word text object
+vim.opt.updatetime = 100 -- faster completion
+vim.opt.colorcolumn = "100" -- add a vertical line to help with wrapping
 vim.opt.conceallevel = 3
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus" -- copy paste between vim and everything else 
+vim.opt.showmode = false -- don't show mode (because we have lualine)
+vim.opt.cursorline = true -- highlight current line
+vim.opt.completeopt = "menu,menuone,noselect" -- completion options (for deoplete)
+vim.opt.spelllang = { "en" } -- spell check
+vim.opt.mouse = "a" -- enable mouse
 
-vim.opt.showmode = false
-vim.cursorline = true
-
-vim.opt.completeopt = "menu,menuone,noselect"
-vim.opt.spelllang = {  "en" }
-
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
-vim.opt.mouse = 'a'
+vim.g.loaded_netrw = 1 -- disable netrw
+vim.g.loaded_netrwPlugin = 1 -- disable netrw
+vim.g.markdown_recoommended_style = 0 -- disable markdown recommended style
